@@ -20,7 +20,7 @@ public class RoleServiceImpl extends AbstractMapService<RoleDTO,Long> implements
 
     @Override
     public List<RoleDTO> findAll() {
-        return super.FindAll();
+        return super.findAll();
     }
 
     @Override
