@@ -34,6 +34,9 @@ public class ProjectServiceImpl extends AbstractMapService<ProjectDTO,String> im
 
     @Override
     public void update(ProjectDTO object) {
+        if (object.getStatus()==null){
+            object.setStatus(findById(object.getProjectCode()).getStatus());
+        } // when updating it goes t create html which doesn't have the current status so we need to get and assign the status back to it.
         super.update(object.getProjectCode(),object);
     }
 
