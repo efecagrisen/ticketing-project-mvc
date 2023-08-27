@@ -15,7 +15,7 @@ public class TaskDTO {
 
     private Long id; // to have sth unique we added this id, normally in DB each object is given an id by default
 
-    private ProjectDTO projectDTO;
+    private ProjectDTO project;
     private UserDTO assignedEmployee;
     private String taskSubject;
     private String taskDetail;
