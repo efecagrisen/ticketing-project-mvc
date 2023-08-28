@@ -56,14 +56,13 @@ public class ProjectServiceImpl extends AbstractMapService<ProjectDTO,String> im
         project.setStatus(Status.COMPLETE);
     }
 
-    @Override
+    @Override //important 02:01 at the video part-5A
     public List<ProjectDTO> getCountedListOfProjectDTO(UserDTO manager) {
 
         List<ProjectDTO> projectList= findAll()
                 .stream()
                 .filter(project -> project.getAssignedManager().equals(manager))
                 .map(project -> {
-//02:01 at the video part-5A
 
                     List<TaskDTO> taskList = taskService.findTasksByManager(manager);
 
